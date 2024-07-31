@@ -17,10 +17,8 @@ Il peut modifier la requête, ajouter des en-têtes, ou effectuer d'autres opér
 Flux: Le gestionnaire de requêtes envoie la requête préparée au Load Balancer.
 4. Load Balancer
 Description: Le load balancer (répartiteur de charge) utilise des algorithmes pour distribuer les requêtes entrantes entre plusieurs serveurs backend.
-Types de Load Balancing:
-RoundRobin Load Balancer: Distribue les requêtes de manière circulaire entre les serveurs backend.
-Weighted RoundRobin Load Balancer: Distribue les requêtes en fonction du poids attribué à chaque serveur backend.
-Least Connections Load Balancer: Envoie la requête au serveur avec le moins de connexions actives.
+dans notre exemple nous avons choisicomme algorithme par defaut : RoundRobin Load Balancer. Ce dernier distribue les requêtes de manière circulaire entre les serveurs backend.
+
 Rôle:
 Choisit un serveur backend selon l'algorithme configuré.
 Transmet la requête au serveur backend choisi.
@@ -32,8 +30,4 @@ Recevoir les requêtes du load balancer.
 Traiter les requêtes et retourner les réponses au load balancer, qui ensuite les retourne au client via le serveur HTTP.
 Flux: Le backend retourne une réponse au load balancer après avoir traité la requête.
 Résumé de l'Interaction
-Client: Envoie une requête HTTP au système.
-HTTP Server: Reçoit la requête et la transmet au gestionnaire de requêtes.
-Request Handler: Prépare la requête et l'envoie au load balancer.
-Load Balancer: Sélectionne un backend selon l'algorithme choisi et transmet la requête à ce backend.
-Backend: Traite la requête et renvoie la réponse au load balancer, qui la transmet ensuite au client via le serveur HTTP.
+
