@@ -16,7 +16,7 @@ port = 8081
 address = "192.168.1.3"
 port = 8082
 
-# Pour Weighted Round Robin, vous pouvez ajouter un poids pour chaque backend
+# Pour Weighted Round Robin, on peut ajouter un poids pour chaque backend
 # [load_balancer.weighted_round_robin]
 # [[backends]]
 # address = "192.168.1.1"
