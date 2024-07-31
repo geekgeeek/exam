@@ -1,0 +1,29 @@
+# Configuration du Load Balancer
+
+[load_balancer]
+strategy = "round_robin"  # Options: "round_robin", "weighted_round_robin", "least_connections"
+
+# Liste des serveurs backends
+[[backends]]
+address = "192.168.1.1"
+port = 8080
+
+[[backends]]
+address = "192.168.1.2"
+port = 8081
+
+[[backends]]
+address = "192.168.1.3"
+port = 8082
+
+# Pour Weighted Round Robin, vous pouvez ajouter un poids pour chaque backend
+# [load_balancer.weighted_round_robin]
+# [[backends]]
+# address = "192.168.1.1"
+# port = 8080
+# weight = 5
+
+# [[backends]]
+# address = "192.168.1.2"
+# port = 8081
+# weight = 1
